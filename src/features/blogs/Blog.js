@@ -11,7 +11,7 @@ class Blog  extends Component {
     }
 
             componentDidMount(){
-                        return fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@burakkocak884`)
+                        return fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@codigoecuador`)
                         .then(response => response.json())
                         .then(blogs =>   this.setState({blogs: blogs})
                             );
@@ -20,7 +20,7 @@ class Blog  extends Component {
 
 
     render(){
-             console.log("are my blogs in?",this.state)
+            // console.log("are my blogs in?",this.state)
          
            
              if(this.state.blogs.items){
@@ -43,7 +43,7 @@ class Blog  extends Component {
                           <a></a>
                         </div>
                         <div class="description">
-                          #{blog.categories.join('# ')}}
+                          #{blog.categories.join('# ')}
                         </div>
                       </div>
                       <div class="extra content">
